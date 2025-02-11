@@ -1,14 +1,25 @@
-import { namespaceWrapper } from '@_koii/namespace-wrapper';
+import { namespaceWrapper } from "@_koii/namespace-wrapper";
 
-export async function submission(roundNumber: number): Promise<string | void> {
-  /**
-   * Submit the task proofs for auditing
-   * Must return a string of max 512 bytes to be submitted on chain
-   */
+export async function submission(roundNumber: number): Promise<boolean> {
   try {
-    console.log(`MAKE SUBMISSION FOR ROUND ${roundNumber}`);
-    return await namespaceWrapper.storeGet('value') ?? '';
+    // Get stored results
+    const results = await namespaceWrapper.storeGet(`node_status_${roundNumber}`);
+    
+    if (!results) {
+      console.error('No results found for submission');
+      return false;
+    }
+
+    // Submit results to the network
+    await namespaceWrapper.submitTask({
+      roundNumber: roundNumber,
+      taskOutput: results,
+    });
+
+    console.log('Successfully submitted results for round', roundNumber);
+    return true;
   } catch (error) {
-    console.error('MAKE SUBMISSION ERROR:', error);
+    console.error('Error in submission:', error);
+    return false;
   }
 }

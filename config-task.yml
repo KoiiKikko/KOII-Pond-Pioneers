@@ -1,15 +1,37 @@
-# Task Name: (Required) 
-task_name: 'TypeScript Template'
+# Task Name: The name of your task
+task_name: "koii-network-pond-pioneers"
+
 # Task Author: (Required) 
-author: 'Koii'
-# Task Description: (Required) 
-description: 'description'
+author: 'Kikokuryu'
+
+# Task Description: What does your task do?
+description: "K2 Network Monitor for Pond Pioneers - Tracks health, performance, and metrics of Koii K2 nodes across mainnet, testnet, and devnet. Provides detailed analytics on node status, network performance, and cluster health."
+
 # Repository URL: (Required)
-repositoryUrl: 'https://github.com/koii-network/task-template' 
+repositoryUrl: 'https://github.com/KoiiKikko/-Koii-Network--Pond-Pioneers-' 
+
 # Image URL: (Required) Will be displayed in desktop node
-imageUrl: 'imageUrl'
+imageUrl: 'https://raw.githubusercontent.com/KoiiKikko/-Koii-Network--Pond-Pioneers-/main/assets/pond-pioneers-logo.png'
+
+# Additional Images in optional metadata
+optional_metadata:
+  category: "network-monitoring"
+  subcategory: "node-health"
+  version: "1.0.0"
+  author: "Kikokuryu"
+  website: "https://www.koii.network"
+  repository: "https://github.com/KoiiKikko/-Koii-Network--Pond-Pioneers-"
+  images:
+    banner: "https://raw.githubusercontent.com/KoiiKikko/-Koii-Network--Pond-Pioneers-/main/assets/banner.png"
+    preview: "https://raw.githubusercontent.com/KoiiKikko/-Koii-Network--Pond-Pioneers-/main/assets/preview.png"
+    thumbnail: "https://raw.githubusercontent.com/KoiiKikko/-Koii-Network--Pond-Pioneers-/main/assets/thumbnail.png"
+    screenshots:
+      - "https://raw.githubusercontent.com/KoiiKikko/-Koii-Network--Pond-Pioneers-/main/assets/screenshot1.png"
+      - "https://raw.githubusercontent.com/KoiiKikko/-Koii-Network--Pond-Pioneers-/main/assets/screenshot2.png"
+      - "https://raw.githubusercontent.com/KoiiKikko/-Koii-Network--Pond-Pioneers-/main/assets/screenshot3.png"
+
 # Info URL: (Required) Will be displayed in desktop node
-infoUrl: 'infoUrl'
+infoUrl: 'https://github.com/KoiiKikko/-Koii-Network--Pond-Pioneers-#readme'
 
 # Task executable network: (Required | DEVELOPMENT, ARWEAVE, or IPFS) : IPFS is the default and common value
 task_executable_network: 'IPFS'
@@ -33,35 +55,41 @@ minimum_stake_amount: 1.9
 task_type: 'KPL'
 
 # Token Mint Address: (ONLY task_type == KPL) Fire Token as an example here. 
-token_type: "FJG2aEPtertCXoedgteCCMmgngSZo1Zd715oNBzR7xpR"
+token_type: "ELoQp3tgLgC4JSE2KvtqdKXTwxSjChZMJY8jveh6moty"
 
 # Total bounty amount:  (Required) The total bounty amount that will be distributed to the task. (Not accepted in case of update task).
-total_bounty_amount: 10
+total_bounty_amount: 10000
 
 # Bounty amount per round: (Required) Every round's maximum distribution, you can decide the logics in your task. 
-bounty_amount_per_round: 0.1
+bounty_amount_per_round: 1.0
 
 # Allowed failed distributions: (Required) Number of times re-submission is allowed for the distribution list in case of an audit, it is also the rounds of submission it will keep. 
 allowed_failed_distributions: 3
 
 # Space: (Required) Expected Task Data Size in MBs for the account size. 
 # Minimum: 1 for production, 0.1 for testing; Calculation Details: https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#space
-space: 0.1
+space: 1.0
 
 # Requirement Tags: (Optional): To add more global variables and task variables, please refer to the type, value, description format shown below.
 requirementsTags:
-  - type: CPU
-    value: '4-core'
-  - type: RAM
-    value: '5 GB'
-  - type: STORAGE
-    value: '5 GB'
-  - type: TASK_VARIABLE
-    value: 'EXAMPLE_VARIABLE'
-    description: 'The password of your volunteer Twitter account.'
+  - type: "GLOBAL"
+    value: "K2_ENDPOINTS"
+    description: "List of K2 network endpoints to monitor"
+
+  - type: "TASK"
+    value: "CHECK_INTERVAL"
+    description: "Interval in seconds between node checks (default: 15)"
+
+  - type: "TASK"
+    value: "ALERT_THRESHOLDS"
+    description: "Performance thresholds for alerts (response time, TPS, etc.)"
+
+  - type: "TASK"
+    value: "NETWORK_TYPES"
+    description: "Types of networks to monitor (mainnet, testnet, devnet)"
 
 # Tags: You can select the tags here via https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#tags
-tags: ["AI", "ML"] 
+tags: ["Network-Monitoring", "K2", "Node-Health", "Performance-Metrics", "Blockchain", "Koii-Network", "Pond-Pioneers"] 
 # Environment: (Required | TEST or PRODUCTION) Production mode will expose your task to all the task runners. 
 environment: "TEST"
 
