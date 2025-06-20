@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OG Koii Pond Pioneer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f9f9fa; }
+    h1 { color: #1976d2; }
+    p { max-width: 600px; }
+    .logo { width: 100px; }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="KOII Pond Logo" class="logo">
+  <h1>Welcome to OG Koii Pond Pioneer</h1>
+  <p>
+    This is the official homepage for the OG Koii Pond Pioneer project.<br>
+    Explore our journey, learn about KOII Network, and join the Pond Pioneers!
+  </p>
+  <ul>
+    <li><a href="https://github.com/KoiiKikko/OG-Koii-Pond-Pioneer">GitHub Repository</a></li>
+    <li><a href="#">Project Docs</a></li>
+    <li><a href="#">Join the Community</a></li>
+  </ul>
+</body>
+</html>
